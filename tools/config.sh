@@ -76,16 +76,16 @@ INSTALLATIONS=(
   vers:   "sbt -no-colors sbtVersion|?info? <{ver}>"
   where:  "devel build"
 
-  Spark ver: "2.2.0"
+  Spark ver: "2.1.1"
   url:    "https://archive.apache.org/dist/spark/spark-<{ver}>/spark-<{ver}>-bin-hadoop2.7.tgz"
-  sha256: "97fd2cc58e08975d9c4e4ffa8d7f8012c0ac2792bcd9945ce2a561cf937aebcc"
+  sha256: "372ac4f73221c07696793101007a4f19e31566d1f0d9bd0e5205b6fb5b45bfc2"
   exes:   "spark-shell spark-sql spark-submit spark-class pyspark sparkR"
   vers:   "spark-shell --version|* version <{ver}>"
   where:  "devel runtime build"
 
-  Conda ver: "4.3.21"
+  Conda ver: "4.2.12"
   url:    "https://repo.continuum.io/miniconda/Miniconda3-<{ver}>-Linux-x86_64.sh"
-  sha256: "e9089c735b4ae53cb1035b1a97cec9febe6decf76868383292af589218304a90"
+  sha256: "c59b3dd3cad550ac7596e0d599b91e75d88826db132e4146030ef471bb434e9a"
   instcmd: 'PYTHONPATH="" bash "$1" -b -f -p "$PWD"'
   exes:   "python python3 ipython ipython3 jupyter conda pip"
   vers:   "PYTHONDONTWRITEBYTECODE=true conda --version|conda <{ver}>"
